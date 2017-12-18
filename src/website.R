@@ -33,6 +33,7 @@ new_article <- function(slug, title = slug, date = lubridate::today(), site_root
 upload_website <- function(remote_path = REMOTE_PATH, site_root = "website") {
   old_wd <- getwd()
   setwd(site_root)
-  system(paste0("rsync -v -r -a ./ ", remote_path))
+  #system(paste0("rsync -v -r -a ./ ", remote_path))
+  system(paste0("rsync --exclude 'draft_*' -v -r -a ./ ", remote_path))
   setwd(old_wd)
 }
