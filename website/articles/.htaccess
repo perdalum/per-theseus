@@ -1,0 +1,47 @@
+Options +Indexes
+
+IndexOptions +FancyIndexing
+IndexOptions +FoldersFirst
+IndexOptions +XHTML
+IndexOptions +HTMLTable
+IndexOptions +SuppressRules
+IndexOptions +SuppressSize
+IndexOptions +SuppressIcon
+
+IndexOptions +NameWidth=*
+IndexOptions +DescriptionWidth=*
+IndexOptions +Charset=UTF-8
+
+#IndexOptions +IconHeight=16 
+#IndexOptions +IconWidth=16
+#IndexOptions IconsAreLinks
+
+AddIcon ../icons/left-arrow.png  ..
+
+AddIcon ../icons/drawing.png  city-with-seagulls
+AddIcon /icons/hand.right.gif README
+AddIcon ../icons/article.png ^^DIRECTORY^^
+AddIcon /icons/blank.gif ^^BLANKICON^^
+
+IndexIgnore .htaccess /resource .DS_Store HEADER.html README.html
+
+IndexStyleSheet "../css/index.css"
+
+# ARTICLE DESCRIPTIONS
+
+AddDescription "Never Miss Another xkcd" never-miss-xkcd
+AddDescription "Drawing with the Paper app" city-with-seagulls
+AddDescription "Experimenting with steganography" hiding-stuff-in-stuff
+AddDescription "Besøg af børnehavenissen" christmass-visit-by-aage
+AddDescription "Creating a global date abbreviation" ddate
+AddDescription "Internettes historie—min version" history-of-the-internet
+
+AddDescription "directory_description" slug_line
+AddDescription "dette er en test" slug-line
+AddDescription "Creating a custom and simple CMS" hackers-cms
+AddDescription "A very simple but customizable CMS" simple-cms
+AddDescription "Using Java for writing UNIX utilities" java-shots
+AddDescription "A Half-naked Ned Flanders" IMG_1115.JPG
+AddDescription "A naive book analysis" Book_analysis
+AddDescription "My Great Reading Challenge" a-stack-of-books
+

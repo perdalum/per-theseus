@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Untitled
+ </title>
+ <link href="HTMLFiles/Book analysis.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Title">
+ Naive analysis of books
+</p>
+
+<p class="Text">
+<em>March, 2016</em>
+
+
+<p class="Text">
+ I have 65.000 books from Project Gutenberg
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_1.png" alt="Book analysis_1.png" width="377" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_2.gif" alt="Book analysis_2.gif" width="180" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_3.png" alt="Book analysis_3.png" width="41" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Create two helper functions
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_4.png" alt="Book analysis_4.png" width="594" height="422" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ How much RAM does that data use
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_5.png" alt="Book analysis_5.png" width="443" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_6.png" alt="Book analysis_6.png" width="67" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Let&rsquo;s try to read some metadata from 10 books
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_7.png" alt="Book analysis_7.png" width="240" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_8.png" alt="Book analysis_8.png" width="309" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_9.png" alt="Book analysis_9.png" width="603" height="201" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The same metadata in tabular form
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_10.png" alt="Book analysis_10.png" width="340" height="13" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10000.txt</span></td>
+  <td style='text-align: left;'><span>Anonymous</span></td>
+  <td style='text-align: left;'><span>The Magna Carta</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>101718</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10001.txt</span></td>
+  <td style='text-align: left;'><span>Lucius Seneca</span></td>
+  <td style='text-align: left;'><span>Apocolocyntosis</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>52510</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10002-8.txt</span></td>
+  <td style='text-align: left;'><span>William Hope Hodgson</span></td>
+  <td style='text-align: left;'><span>The House on the Borderland</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>306901</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10002.txt</span></td>
+  <td style='text-align: left;'><span>William Hope Hodgson</span></td>
+  <td style='text-align: left;'><span>The House on the Borderland</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>306892</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10003-8.txt</span></td>
+  <td style='text-align: left;'><span>Mary King Waddington</span></td>
+  <td style='text-align: left;'><span>My First Years As A Frenchwoman, 1876-1879</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>380829</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10003.txt</span></td>
+  <td style='text-align: left;'><span>Mary King Waddington</span></td>
+  <td style='text-align: left;'><span>My First Years As A Frenchwoman, 1876-1879</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>380817</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10004-8.txt</span></td>
+  <td style='text-align: left;'><span>Lindsay, Anna Robertson Brown</span></td>
+  <td style='text-align: left;'><span>The Warriors</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>302753</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10004.txt</span></td>
+  <td style='text-align: left;'><span>Lindsay, Anna Robertson Brown</span></td>
+  <td style='text-align: left;'><span>The Warriors</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>302750</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10005-8.txt</span></td>
+  <td style='text-align: left;'><span>George Tucker</span></td>
+  <td style='text-align: left;'><span>A Voyage to the Moon</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>434769</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>10005.txt</span></td>
+  <td style='text-align: left;'><span>George Tucker</span></td>
+  <td style='text-align: left;'><span>A Voyage to the Moon</span></td>
+  <td style='text-align: left;'><span>English</span></td>
+  <td style='text-align: left;'><span>434760</span></td>
+ </tr>
+</table>
+
+<p class="Text">
+ Get the metadata from all 65.000 books
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_11.png" alt="Book analysis_11.png" width="456" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ How longc did it take to get the four metadata values from those books?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_12.png" alt="Book analysis_12.png" width="31" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_13.png" alt="Book analysis_13.png" width="55" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_14.png" alt="Book analysis_14.png" width="103" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_15.png" alt="Book analysis_15.png" width="429" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_16.png" alt="Book analysis_16.png" width="126" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_17.png" alt="Book analysis_17.png" width="41" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now it&rsquo;s time to select the training sets and the validation sets. First select all Shakespeare, Jules Verne, and some other author to be decided.<br /><br />Still, first we will ignore anything that&rsquo;s not written in English. <br /><br />Which languages do we have?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_18.png" alt="Book analysis_18.png" width="374" height="13" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span></span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Aleutian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>German</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Italian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Dutch</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Swedish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Danish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Finnish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French (with English)</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Bulgarian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Spanish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Serbian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Norwegian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Portuguese</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>German and Catalan</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Esperanto</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French and Dutch</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English / French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Romanian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>FASTA</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>german</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>(English and Nahuatl)</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English with French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English, with Italian and French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Chinese</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish with English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French/English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English, Latin, Spanish, and Italian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English with Khasi (Language spoken in N.E. India)</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Czech</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Tagalog</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>ASCII</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>***CAREFUL***</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Dutch and Flemish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Portugese</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French / English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish/English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Welsh</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Italian and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Old English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English, Middle (1100-1500)</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>english</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>en</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Russian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>EN</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Catalan</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Latin and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Latin with English and Greek (ancient)</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Nahuatl</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Icelandic</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Polish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>En</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Quiche</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French / Onondaga / English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish and Tagalog</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Ilocano</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Iloko</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and Chinook</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Interlingua</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Irish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Iloko, Spanish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Friulian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Afrikaans</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English/latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Kamilaroi and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Gascon</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Greek</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Italian and French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Neapolitan</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Hebrew</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Hungarian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Japanese</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Frisian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Venetian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English - Latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Spanish, English and Tagalog</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Cebuano</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Galician</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Nahuatl</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Maori</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Middle English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>German and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Breton</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Arapaho</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Czech, Esperanto</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Zh</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Inuktitut</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Bagobo</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Kashubian and Polish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Gaelic</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English and German</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Portuguese &amp; French</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>GR</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Slovenian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>NU</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Englishs</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Telugu</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>JP</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English &amp; Spanish</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Ojibwa</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Chinese and English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>French and Latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Arabic</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Estonian</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Farsi</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>48771</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Scots</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>5648</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Latin, German</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>GERMAN</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>English/Latin</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>German, with English comments</span></td>
+ </tr>
+</table>
+
+<p class="Text">
+ How many different languages?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_19.png" alt="Book analysis_19.png" width="343" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_20.png" alt="Book analysis_20.png" width="23" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Well, drop everything not in English and only English
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_21.png" alt="Book analysis_21.png" width="499" height="66" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_22.png" alt="Book analysis_22.png" width="454" height="48" style="vertical-align:middle" />
+</p>
+
+<table class='Output'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><table class='Inline'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Every language</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>64599</span></td>
+ </tr>
+</table>
+
+</td>
+  <td style='text-align: left;'><table class='Inline'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>Only English</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>55340</span></td>
+ </tr>
+</table>
+
+</td>
+ </tr>
+</table>
+
+<p class="Text">
+ Now from the set, select texts written by Shakespeare, but first create a small utility function
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_23.png" alt="Book analysis_23.png" width="497" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_24.png" alt="Book analysis_24.png" width="329" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_25.png" alt="Book analysis_25.png" width="604" height="779" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_26.png" alt="Book analysis_26.png" width="149" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_27.png" alt="Book analysis_27.png" width="16" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Select all works by Jules Verne
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_28.png" alt="Book analysis_28.png" width="274" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_29.png" alt="Book analysis_29.png" width="603" height="1289" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_30.png" alt="Book analysis_30.png" width="141" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_31.png" alt="Book analysis_31.png" width="16" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now, who should the third author be? Which authors do we have to choose from?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_32.png" alt="Book analysis_32.png" width="334" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_33.png" alt="Book analysis_33.png" width="576" height="127" style="vertical-align:middle;" usemap="#map_33" />
+<map name="map_33">
+<area shape="rect" coords="13,117,71,107" title="Dynamic[FEPrivate`FrontEndResource[FEStrings, sizeExplanation]]" nohref="" />
+</map>
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_34.png" alt="Book analysis_34.png" width="397" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_35.png" alt="Book analysis_35.png" width="41" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Ah, that&rsquo;s a lot! That numbers gives one the urge to examine the author to works per author relationship, but that&rsquo;s not my mission here.<br /><br />Maybe go for Dosteyevsky?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_36.png" alt="Book analysis_36.png" width="397" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_37.png" alt="Book analysis_37.png" width="458" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Naw, too many different spellings. I&rsquo;ll select Victor Hugo as the third author
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_38.png" alt="Book analysis_38.png" width="266" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_39.png" alt="Book analysis_39.png" width="557" height="337" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now, onwards to the stuf I know nothing about, but which is so easy to do in <span style='font-style: italic;'>Mathematica</span>. First create a function that splits a list of works into a training and test set
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_40.png" alt="Book analysis_40.png" width="321" height="99" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Then create training and test sets for the three authors
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_41.gif" alt="Book analysis_41.gif" width="545" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_42.gif" alt="Book analysis_42.gif" width="439" height="65" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_43.png" alt="Book analysis_43.png" width="90" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_44.png" alt="Book analysis_44.png" width="90" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_45.png" alt="Book analysis_45.png" width="82" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Now it&rsquo;s time to actually load the content of the books or works into memory
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_46.gif" alt="Book analysis_46.gif" width="472" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ And create a classifier function based on this content
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_47.png" alt="Book analysis_47.png" width="407" height="99" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_48.gif" alt="Book analysis_48.gif" width="326" height="46" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ That took less than a minute!<br /><br />Now let&rsquo;s test the classifier
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_49.gif" alt="Book analysis_49.gif" width="456" height="48" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_50.png" alt="Book analysis_50.png" width="246" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_51.png" alt="Book analysis_51.png" width="490" height="65" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_52.png" alt="Book analysis_52.png" width="239" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_53.png" alt="Book analysis_53.png" width="499" height="65" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_54.png" alt="Book analysis_54.png" width="239" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_55.png" alt="Book analysis_55.png" width="597" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ To my laymen&rsquo;s eyes it looks good. Let&rsquo;s pick a &ldquo;random&rdquo; book
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_56.png" alt="Book analysis_56.png" width="156" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_57.png" alt="Book analysis_57.png" width="452" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Of pur three authors, who did most likely write that text?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_58.png" alt="Book analysis_58.png" width="394" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_59.png" alt="Book analysis_59.png" width="472" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ I don&rsquo;t know&hellip;<br />
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_60.png" alt="Book analysis_60.png" width="405" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_61.png" alt="Book analysis_61.png" width="421" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Why is that more Shakespeare than Verne?<br /><br />What if I wrote som small sentences where I tried to sound like one of the three authors?
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_62.png" alt="Book analysis_62.png" width="425" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_63.png" alt="Book analysis_63.png" width="86" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_64.png" alt="Book analysis_64.png" width="345" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_65.png" alt="Book analysis_65.png" width="149" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_66.png" alt="Book analysis_66.png" width="501" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_67.png" alt="Book analysis_67.png" width="86" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Below just some jibberish&hellip;
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_68.png" alt="Book analysis_68.png" width="363" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_69.png" alt="Book analysis_69.png" width="436" height="58" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_70.png" alt="Book analysis_70.png" width="306" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_71.png" alt="Book analysis_71.png" width="64" height="26" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_72.png" alt="Book analysis_72.png" width="139" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_73.png" alt="Book analysis_73.png" width="70" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_74.png" alt="Book analysis_74.png" width="409" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Book analysis_75.png" alt="Book analysis_75.png" width="454" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_76.png" alt="Book analysis_76.png" width="490" height="13" style="vertical-align:middle" />
+</p>
+
+<p class="Message">
+ <img src="HTMLFiles/Book analysis_77.png" alt="Book analysis_77.png" width="279" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Message">
+ <img src="HTMLFiles/Book analysis_78.png" alt="Book analysis_78.png" width="449" height="16" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ An option for showing the timing for the latest computation
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_79.png" alt="Book analysis_79.png" width="470" height="31" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Book analysis_80.png" alt="Book analysis_80.png" width="4" height="13" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

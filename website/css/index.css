@@ -1,0 +1,166 @@
+
+body {
+   color: #333;
+   background: #FFF;
+/*   background: #fdf3ea; */
+   font-family: Geneva, Arial, sans-serif;
+   font-size: 14px;
+   line-height: 1.3;
+   max-width: 850px;
+   margin: 0 auto;
+}
+
+.header,
+.navbar,
+.footer,
+h2 {
+   color: #bbb;
+}
+
+.header {
+   font-size: 32px;
+   font-weight: bold;
+   margin: 18px 0 20px;
+}
+
+h2 {
+   font-size: 22px;
+   padding-top: 12px;
+}
+.main-content {
+  padding: 40px 15px;
+  text-align: left;
+}
+
+.footer {
+   padding: 50px;
+   text-align: center;
+}
+
+.header,
+.navbar {
+   padding-right: 5%;
+   text-align: right;
+}
+
+.navbar {
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+   margin-bottom: 30px;
+   padding-bottom: 3px;
+}
+
+blockquote {
+   text-align: justify;
+   padding-bottom: 20px;
+}
+
+blockquote .signature {
+   text-align: right;
+}
+
+.content {
+   margin: 0 7%;
+   padding: 0;
+}
+
+pre {
+   font-family: Menlo, Consolas, Monaco, "Courier New", monospace;
+   background: #eee;
+   overflow: auto;
+   padding: 20px 10px;
+   width=90%;
+   font-size: 70%;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* this should be a very faint dash line */
+a:link {
+   color: #09c;
+   color: #669900;
+}
+
+a:visited {
+   color: #07a;
+   color: #7acf00;
+}
+
+a:focus,
+a:hover,
+a:active {
+   background-color: #eee;
+   color: #669900;
+}
+
+.display-image {
+}
+
+.display-image p {
+  text-align: center;
+  font-style: italic;
+}
+
+img.display {
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+/*------------------------------------*\
+    Table (directory listing)
+\*------------------------------------*/
+table {
+	width:100%;
+	border-collapse:collapse;
+	//font-size:.875em;
+}
+tr {
+	outline:0;
+	border:0;
+}
+tr:hover td {
+	background:#f6f6f6;
+}
+th {
+	text-align:left;
+	//font-size:.75em;
+	padding-right:20px;
+}
+/* 2nd Column: Filename */
+th + th {
+	width:200px;
+}
+/* 3rd Column: Last Modified */
+th + th + th {
+    width:200px;
+}
+/* 4th Column: Description */
+th + th + th + th {
+	width:300px;
+}
+tr td:first-of-type {
+	padding-left:10px;
+	padding-right:10px;
+}
+td {
+	padding:5px 0;
+	outline:0;
+	border:0;
+	border-bottom:1px solid #edf1f5;
+	vertical-align:middle;
+	text-align:left;
+}
+td a{
+	display: block;
+}
+tr.parent a {
+	color:#9099A3;
+}
+.parent a:hover {
+	color:#2281d0;
+}
