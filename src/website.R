@@ -36,3 +36,7 @@ upload_website <- function(remote_path = REMOTE_PATH, site_root = "website") {
   system(paste0("rsync --exclude 'draft_*' -v -r -a ./ ", remote_path))
   setwd(old_wd)
 }
+
+e <- function(file_path) {
+  rstudioapi::navigateToFile(file_path)
+}

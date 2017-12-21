@@ -36,6 +36,8 @@ if ($this->use_math == 'yes') {
         <span class="navbar-separator">•</span>
         <a href="/<?php echo $this->home?>/pages/books.php">Reading</a>
         <span class="navbar-separator">•</span>
+        <a href="/<?php echo $this->home?>/cv.php">CV</a>
+        <span class="navbar-separator">•</span>
         <a href="/<?php echo $this->home?>/about.php">About</a>
    </div>
    <div class="content">
